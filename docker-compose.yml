@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    container_name: es_amazon_products
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      discovery.type: single-node
+    networks:
+      - network_API_es
+  fastapi:
+    image: es_search_api:1.0.0
+    container_name: search_api_server
+    ports:
+      - "8000:8000"
+    environment:
+      ES_API_ADDRESS: es_amazon_products
+    networks:
+      - network_API_es
+networks:
+  network_API_es:

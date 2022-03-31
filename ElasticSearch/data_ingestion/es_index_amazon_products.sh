@@ -1,0 +1,1 @@
+curl -X PUT localhost:9200/amazon_products -H "Content-Type: application/json" --data-binary "@./data_ingestion/amazon_products_search.json"

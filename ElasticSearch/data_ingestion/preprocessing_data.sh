@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $PWD/data/clean_data.csv | sed -re 's/\""//g' | sed -re 's/Â//g' | sed -re 's/    //g' | sed -re 's/\"//g' | sed 's/\o302\o240/ /g' | tr "'" " " | tr '\n' ' ' | tr '\r' '\n' | sed '1d' >> $PWD/data/preprocessed_data.csv
