@@ -14,8 +14,7 @@ Ce script permet de lancer :
 # API
 L'API expose 3 endpoints :
 - GET /products/status : permet de vérifier le bon fonctionnement de l'API
-- GET /products : permet de réaliser des requêtes de type query DSL. Ce endpoint prend des query parameters pour construire la query DSL.
-Les query parameters sont :
+- GET /products : permet de réaliser des requêtes de type query DSL. Ce endpoint prend les query parameters suivants :
     -  matchers : construit une requête de type `match`. Format du query parameter : matchers=*field*:*value*
        
     -  rangers : construit une requête de type `range`. Format du query parameter : rangers=*field*:*operator*:*value*
@@ -28,8 +27,7 @@ Les query parameters sont :
     >
     >?matchers=product_name:trains&rangers=average_review_rating:gte:4.5&rangers=price:lte:50
 
-- GET /products/aggs : permet de réaliser des requêtes d'aggrégations. Ce endpoint prend des query parameters pour construire la requête d'aggrégation.
-Les query parameters sont :
+- GET /products/aggs : permet de réaliser des requêtes d'aggrégations. Ce endpoint prend les query parameters suivants :
     - aggs_filter: construit une requête d'aggrégation avec des filtres. Format du query parameter : aggs_filter=*filter_title*:*field*:*value*
 
     - aggs_bucket: construit une requête d'aggrégation de type bucket. Format du query parameter : aggs_bucket=*bucket_title*:*bucket_type*:*field*:*interval if histogram (optional)*
