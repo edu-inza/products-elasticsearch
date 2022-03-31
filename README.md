@@ -15,7 +15,6 @@ Ce script permet de lancer :
 L'API expose 3 endpoints :
 - GET /products/status : permet de vérifier le bon fonctionnement de l'API
 - GET /products : permet de réaliser des requêtes de type query DSL. Ce endpoint prend les query parameters suivants :
-Les query parameters sont :
     -  matchers : construit une requête de type `match`. Format du query parameter : matchers=*field*:*value*
        
     -  rangers : construit une requête de type `range`. Format du query parameter : rangers=*field*:*operator*:*value*
